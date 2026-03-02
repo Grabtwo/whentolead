@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Step Ahead LLC - Being A Step Ahead Matters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>A Step Ahead LLC</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#referral" class="nav-link">Referral</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+            <div class="contact-info">
+                <a href="tel:757-561-0317" class="contact-phone">(757)-927-5700</a>
+                <a href="mailto:Leader1@whentolead.com" class="contact-email">Leader1@whentolead.com</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>A Step Ahead LLC</h1>
+            <h2>Being A Step Ahead Matters</h2>
+            <p>Welcome to the first steps of change! We dedicate ourselves to making a therapeutic approach easy and simple. Taking traditional practices and adding a modern touch to</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('about')">Learn More</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Get Started</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Family cooking together">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Our Services</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A healthy family environment promotes physical, emotional, and social well-being, encourages healthy behaviors, and provides a support system for personal growth and stress management.</p>
+                    
+                    <p>A healthy family provides numerous benefits for its members. It promotes physical well-being through an active lifestyle, encourages emotional support and resilience, and fosters healthy behaviors. Strong family relationships can contribute to stress reduction, increase self-esteem, and provide a foundation for positive social interactions. Additionally, a healthy family environment can lead to longevity and overall better health. By prioritizing physical and emotional well-being, families can create a supportive and nurturing environment that enhances the quality of life for all members.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Family Therapy</h3>
+                    <p>Comprehensive family therapy services to strengthen relationships and improve communication.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Youth Services</h3>
+                    <p>Specialized programs designed to support youth development and address behavioral concerns.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Support Groups</h3>
+                    <p>Community-based support groups for families facing similar challenges and experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral Section -->
+    <section id="referral" class="referral">
+        <div class="container">
+            <h2>Services Referral Form</h2>
+            <p class="referral-intro">Use this form to refer a youth for our services. You can fill out the form online and submit it, or download a PDF version to complete offline.</p>
+            
+            <div class="form-actions">
+                <button class="btn btn-primary" onclick="showOnlineForm()">Fill Out Online</button>
+                <button class="btn btn-secondary" onclick="downloadPDF()">Download PDF Form</button>
+            </div>
+
+            <!-- Online Form -->
+            <div id="online-form" class="form-container" style="display: none;">
+                <form id="referral-form" class="referral-form">
+                    <!-- Progress Bar -->
+                    <div class="progress-bar">
+                        <div class="progress-step active" data-step="1">
+                            <span>1</span>
+                            <label>Referring Info</label>
+                        </div>
+                        <div class="progress-step" data-step="2">
+                            <span>2</span>
+                            <label>Youth Info</label>
+                        </div>
+                        <div class="progress-step" data-step="3">
+                            <span>3</span>
+                            <label>Family Info</label>
+                        </div>
+                        <div class="progress-step" data-step="4">
+                            <span>4</span>
+                            <label>Health & Background</label>
+                        </div>
+                        <div class="progress-step" data-step="5">
+                            <span>5</span>
+                            <label>Services & Consent</label>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Referring Agency/Individual Information -->
+                    <div class="form-step active" data-step="1">
+                        <h3>Referring Agency/Individual Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="referring-agency">Referring Agency</label>
+                                <input type="text" id="referring-agency" name="referring-agency" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-person">Contact Person</label>
+                                <input type="text" id="contact-person" name="contact-person" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="position-title">Position/Title</label>
+                                <input type="text" id="position-title" name="position-title">
+                            </div>
+                            <div class="form-group">
+                                <label for="referring-phone">Phone Number</label>
+                                <input type="tel" id="referring-phone" name="referring-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="referring-email">Email Address</label>
+                                <input type="email" id="referring-email" name="referring-email" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="agency-address">Agency Address</label>
+                                <textarea id="agency-address" name="agency-address" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="referral-date">Date of Referral</label>
+                                <input type="date" id="referral-date" name="referral-date" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Youth Information -->
+                    <div class="form-step" data-step="2">
+                        <h3>Youth Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="youth-name">Full Name</label>
+                                <input type="text" id="youth-name" name="youth-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="youth-dob">Date of Birth</label>
+                                <input type="date" id="youth-dob" name="youth-dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="youth-gender">Gender/Titles</label>
+                                <input type="text" id="youth-gender" name="youth-gender">
+                            </div>
+                            <div class="form-group">
+                                <label for="youth-phone">Phone Number</label>
+                                <input type="tel" id="youth-phone" name="youth-phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="youth-email">Email Address</label>
+                                <input type="email" id="youth-email" name="youth-email">
+                            </div>
+                            <div class="form-group">
+                                <label for="emergency-contact">Emergency Contact Name</label>
+                                <input type="text" id="emergency-contact" name="emergency-contact" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emergency-phone">Emergency Phone Number</label>
+                                <input type="tel" id="emergency-phone" name="emergency-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emergency-relationship">Relationship to Youth</label>
+                                <input type="text" id="emergency-relationship" name="emergency-relationship" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Family Information -->
+                    <div class="form-step" data-step="3">
+                        <h3>Family Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="parent-guardian">Parent/Guardian Name(s)</label>
+                                <input type="text" id="parent-guardian" name="parent-guardian" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parent-phone">Phone Number</label>
+                                <input type="tel" id="parent-phone" name="parent-phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parent-relationship">Relationship to Youth</label>
+                                <input type="text" id="parent-relationship" name="parent-relationship" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="household-members">Other Household Members</label>
+                                <textarea id="household-members" name="household-members" rows="3" placeholder="List other household members and their relationship to the youth"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Health and Background -->
+                    <div class="form-step" data-step="4">
+                        <h3>Health and Wellbeing</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="physical-health">Physical Health Conditions</label>
+                                <textarea id="physical-health" name="physical-health" rows="3"></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="mental-health">Mental Health Conditions</label>
+                                <textarea id="mental-health" name="mental-health" rows="3"></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="medications">Medications</label>
+                                <textarea id="medications" name="medications" rows="3"></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="substance-use">Substance Use (if applicable)</label>
+                                <textarea id="substance-use" name="substance-use" rows="2"></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="allergies">Allergies</label>
+                                <textarea id="allergies" name="allergies" rows="2"></textarea>
+                            </div>
+                        </div>
+
+                        <h3>Background Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="reason-referral">Reason for Referral</label>
+                                <textarea id="reason-referral" name="reason-referral" rows="4" placeholder="Please provide a detailed description of the circumstances leading to the referral, including any behavioral, emotional, or social concerns" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="current-school">Current School</label>
+                                <input type="text" id="current-school" name="current-school">
+                            </div>
+                            <div class="form-group">
+                                <label for="grade-level">Grade Level</label>
+                                <input type="text" id="grade-level" name="grade-level">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="special-education">Special Education Services</label>
+                                <textarea id="special-education" name="special-education" rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="current-employer">Current Employer</label>
+                                <input type="text" id="current-employer" name="current-employer">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="legal-involvement">Involvement with Legal System</label>
+                                <textarea id="legal-involvement" name="legal-involvement" rows="2"></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="additional-comments">Any Additional Comments or Information</label>
+                                <textarea id="additional-comments" name="additional-comments" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Services and Consent -->
+                    <div class="form-step" data-step="5">
+                        <h3>Services Needed</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="services-requested">Type of Services Requested</label>
+                                <textarea id="services-requested" name="services-requested" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="monthly-hours">Requested Monthly Hours</label>
+                                <input type="number" id="monthly-hours" name="monthly-hours" min="1" max="200" placeholder="e.g., 20">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="specific-goals">Specific Goals for Youth</label>
+                                <textarea id="specific-goals" name="specific-goals" rows="4" required></textarea>
+                            </div>
+                        </div>
+
+                        <h3>Consent and Authorization</h3>
+                        <div class="consent-section">
+                            <p>I hereby authorize the sharing of the above information with the relevant service providers for the purpose of this referral.</p>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="signature">Digital Signature</label>
+                                    <input type="text" id="signature" name="signature" placeholder="Type your full name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="signature-date">Date</label>
+                                    <input type="date" id="signature-date" name="signature-date" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="consent-checkbox" required>
+                                    <span class="checkmark"></span>
+                                    I confirm that I have the authority to make this referral and consent to sharing this information.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Navigation -->
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-secondary" id="prev-btn" onclick="previousStep()" style="display: none;">Previous</button>
+                        <button type="button" class="btn btn-primary" id="next-btn" onclick="nextStep()">Next</button>
+                        <button type="submit" class="btn btn-success" id="submit-btn" style="display: none;">Submit Referral</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Contact us whenever you have any questions. We are always here for you!</p>
+            <div class="contact-info-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:Leader1@whentolead.com">Leader1@whentolead.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <a href="tel:757-561-0317">(757)-927-5700</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Address</h3>
+                    <p>Contact us for location details</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>A Step Ahead LLC</h3>
+                    <p>Being A Step Ahead Matters</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#referral">Referral</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (757)-927-5700</p>
+                    <p><i class="fas fa-envelope"></i> Leader1@whentolead.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 A Step Ahead LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
