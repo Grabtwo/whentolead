@@ -70,17 +70,13 @@ function showOnlineForm() {
 
 // Download PDF form
 function downloadPDF() {
-    // Create a simple PDF download link
-    // In a real implementation, this would generate a PDF from the original form
+    // Download the PDF form
     const link = document.createElement('a');
-    link.href = '/home/ubuntu/upload/ReferralForm.pdf';
+    link.href = 'ReferralForm.pdf';
     link.download = 'A_Step_Ahead_Referral_Form.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    
-    // Show message to user
-    alert('PDF download initiated. If the download doesn\'t start automatically, please contact us for the form.');
 }
 
 // Form step navigation
@@ -390,6 +386,7 @@ function showOnlineForm() {
 // Export functions for global access
 window.showOnlineForm = showOnlineForm;
 window.downloadPDF = downloadPDF;
+window.showOnlineForm = showOnlineForm;
 window.nextStep = nextStep;
 window.previousStep = previousStep;
 window.scrollToSection = scrollToSection;
